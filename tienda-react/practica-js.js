@@ -143,39 +143,39 @@ const productos = [
         stock: 12
     }
 ];
-console.log(productos);
+//console.log(productos);
 productos.forEach((producto, indice) => {
-    console.log(`${indice + 1}. ${producto.nombre} - $${producto.precio} - stock: ${producto.stock}`);
+  console.log(`${indice + 1}. ${producto.nombre} - $${producto.precio} - stock: ${producto.stock}`);
 });
 
 // nombres de los productos
 const nombres = productos.map(producto => producto.nombre);
-console.log(nombres);
+//console.log(nombres);
 
 // precios con IVA
 const preciosConIva = productos.map(producto => producto.precio * 1.19);
-console.log(preciosConIva);
+//console.log(preciosConIva);
 
 // nombres en mayúscula
 const nombresMayuscula = productos.map(producto => producto.nombre.toUpperCase());
-console.log(nombresMayuscula);
+//console.log(nombresMayuscula);
 
 // resumen de productos
 const resumenProductos = productos.map(
     producto => `${producto.nombre} cuesta $${producto.precio}`
 );
-console.log(resumenProductos);
+//console.log(resumenProductos);
 
 // 1. productos con precio mayor a $100.000
 const productosMayores = productos.filter(producto => producto.precio > 100000);
-console.log("Productos mayores a $100.000:", productosMayores);
+//console.log("Productos mayores a $100.000:", productosMayores);
 
 
 // 2. productos con precio entre $50.000 y $200.000
 const productosEntre = productos.filter(
     producto => producto.precio >= 50000 && producto.precio <= 200000
 );
-console.log("Productos entre $50.000 y $200.000:", productosEntre);
+//console.log("Productos entre $50.000 y $200.000:", productosEntre);
 
 
 // 3. productos de una categoría escogida
@@ -183,12 +183,12 @@ console.log("Productos entre $50.000 y $200.000:", productosEntre);
 const productosPerifericos = productos.filter(
     producto => producto.categoria === "Perifericos"
 );
-console.log("Productos de la categoría Perifericos:", productosPerifericos);
+//console.log("Productos de la categoría Perifericos:", productosPerifericos);
 
 
 // 4. buscar el producto con id 5
 const producto5 = productos.find(producto => producto.id === 5);
-console.log("Producto con ID 5:", producto5);
+//console.log("Producto con ID 5:", producto5);
 
 
 // 5. función buscarProducto(id)
@@ -197,4 +197,32 @@ const buscarProducto = id => {
 };
 
 // probar la función
-console.log("Producto encontrado:", buscarProducto(5));
+//console.log("Producto encontrado:", buscarProducto(5));
+
+
+const hayAgotados = productos.some(
+    producto => producto.stock === 0
+);
+
+const hayProductoMillonario = productos.some(
+    producto => producto.precio > 1000000
+);
+
+const preciosValidos = productos.every(
+    producto => producto.precio > 0
+);
+
+const stocksValidos = productos.every(
+    producto => producto.stock >= 0
+);
+
+const valorInventario = productos.reduce(
+    (total, producto) => total + producto.precio * producto.stock,
+    0
+);
+
+console.log(hayAgotados);
+console.log(hayProductoMillonario);
+console.log(preciosValidos);
+console.log(stocksValidos);
+console.log(valorInventario);

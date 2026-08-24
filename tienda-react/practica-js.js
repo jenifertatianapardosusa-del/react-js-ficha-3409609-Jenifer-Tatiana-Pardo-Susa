@@ -147,3 +147,21 @@ console.log(productos);
 productos.forEach((producto, indice) => {
     console.log(`${indice + 1}. ${producto.nombre} - $${producto.precio} - stock: ${producto.stock}`);
 });
+
+// nombres de los productos
+const nombres = productos.map(producto => producto.nombre);
+console.log(nombres);
+
+// precios con IVA
+const preciosConIva = productos.map(producto => producto.precio * 1.19);
+console.log(preciosConIva);
+
+// nombres en mayúscula
+const nombresMayuscula = productos.map(producto => producto.nombre.toUpperCase());
+console.log(nombresMayuscula);
+
+// resumen de productos
+const resumenProductos = productos.map(
+    producto => `${producto.nombre} cuesta $${producto.precio}`
+);
+console.log(resumenProductos);

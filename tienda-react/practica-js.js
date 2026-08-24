@@ -144,3 +144,6 @@ const productos = [
     }
 ];
 console.log(productos);
+productos.forEach((producto, indice) => {
+    console.log(`${indice + 1}. ${producto.nombre} - $${producto.precio} - stock: ${producto.stock}`);
+});

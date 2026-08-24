@@ -165,3 +165,36 @@ const resumenProductos = productos.map(
     producto => `${producto.nombre} cuesta $${producto.precio}`
 );
 console.log(resumenProductos);
+
+// 1. productos con precio mayor a $100.000
+const productosMayores = productos.filter(producto => producto.precio > 100000);
+console.log("Productos mayores a $100.000:", productosMayores);
+
+
+// 2. productos con precio entre $50.000 y $200.000
+const productosEntre = productos.filter(
+    producto => producto.precio >= 50000 && producto.precio <= 200000
+);
+console.log("Productos entre $50.000 y $200.000:", productosEntre);
+
+
+// 3. productos de una categoría escogida
+// Escogemos la categoría "Perifericos"
+const productosPerifericos = productos.filter(
+    producto => producto.categoria === "Perifericos"
+);
+console.log("Productos de la categoría Perifericos:", productosPerifericos);
+
+
+// 4. buscar el producto con id 5
+const producto5 = productos.find(producto => producto.id === 5);
+console.log("Producto con ID 5:", producto5);
+
+
+// 5. función buscarProducto(id)
+const buscarProducto = id => {
+    return productos.find(producto => producto.id === id);
+};
+
+// probar la función
+console.log("Producto encontrado:", buscarProducto(5));

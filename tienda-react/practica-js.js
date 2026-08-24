@@ -68,4 +68,4 @@ console.log("Cuadrado de 5:", cuadrado(5));
 
 console.log("¿Es mayor de edad?:", esMayorEdad(20));
 
-console.log("Nombre completo:", nombreCompleto("Diego", "Beltrán"));
+console.log("Nombre completo:", nombreCompleto("Diego", "Beltran"));

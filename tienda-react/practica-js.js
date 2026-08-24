@@ -4,50 +4,68 @@
 
 // Multiplicación
 
-function calcularTotal(precio, cantidad) {
-const total = precio * cantidad;
-return total;
-}
-const resultado = calcularTotal(50000, 3);
-console.log("El resultado de la multiplicación es: ")
-console.log(resultado);
+//function calcularTotal(precio, cantidad) {
+//const total = precio * cantidad;
+//return total;
+//}
+//const resultado = calcularTotal(50000, 3);
+//console.log("El resultado de la multiplicación es: ")
+//console.log(resultado);
 
 // Suma 
 
-function calcularSuma(a, b) {
-    const suma = a + b;
-    return suma;
-}
-const resultado2 = calcularSuma (8, 9);
-console.log ("El resultado de la suma es: ")
-console.log(resultado2);
+//function calcularSuma(a, b) {
+//    const suma = a + b;
+//    return suma;
+//}
+//const resultado2 = calcularSuma (8, 9);
+//console.log ("El resultado de la suma es: ")
+//console.log(resultado2);
 
 // Resta
 
-function calcularresta(c, d){
-    const resta = c - d 
-    return resta;
-}
-const resultado3 = calcularresta (2, 4)
-console.log("El resultado de la resta es: ")
-console.log(resultado3);
+//function calcularresta(c, d){
+//    const resta = c - d 
+//    return resta;
+//}
+//const resultado3 = calcularresta (2, 4)
+//console.log("El resultado de la resta es: ")
+//console.log(resultado3);
 
 // División 
 
-function calcularDivision(e, f){
-    const division = e / f
-    return division;
-}
-const resultado4 = calcularDivision(5, 7)
-console.log("El resultado de la division: ")
-console.log(resultado4);
+//function calcularDivision(e, f){
+//    const division = e / f
+ //   return division;
+//}
+//const resultado4 = calcularDivision(5, 7)
+//console.log("El resultado de la division: ")
+//console.log(resultado4);
 
 // Promedio 
 
-function calcularPromedio(nota1, nota2, nota3){
-    const promedio = nota1 + nota2 + nota3 / 3
-    return promedio;
-}
-const resultado5 = calcularPromedio(5.0, 3.5, 4.0)
-console.log("El promedio de notas es: ")
-console.log(resultado5);
+//function calcularPromedio(nota1, nota2, nota3){
+//    const promedio = nota1 + nota2 + nota3 / 3
+//    return promedio;
+//}
+//const resultado5 = calcularPromedio(5.0, 3.5, 4.0)
+//console.log("El promedio de notas es: ")
+//console.log(resultado5);
+
+// 1. cuadrado(numero)
+const cuadrado = numero => numero * numero;
+
+// 2. esMayorEdad(edad)
+const esMayorEdad = edad => edad >= 18;
+
+// 3. nombreCompleto(nombre, apellido)
+const nombreCompleto = (nombre, apellido) => `${nombre} ${apellido}`;
+
+
+// Ejecutar y comprobar resultados
+
+console.log("Cuadrado de 5:", cuadrado(5));
+
+console.log("¿Es mayor de edad?:", esMayorEdad(20));
+
+console.log("Nombre completo:", nombreCompleto("Diego", "Beltrán"));

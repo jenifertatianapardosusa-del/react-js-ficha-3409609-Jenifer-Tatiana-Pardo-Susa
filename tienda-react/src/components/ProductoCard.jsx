@@ -1,17 +1,22 @@
 function ProductoCard({ producto }) {
 const {
 nombre,
-
 precio,
 categoria,
 stock
 } = producto;
+
 const estado =
 stock > 0
 ? "Disponible"
 : "Agotado";
+
 const mostrarProducto = () => {
 alert(`Seleccionaste ${nombre}`);
+};
+
+const formatearPrecio = precio => {
+return precio.toLocaleString("es-CO");
 };
 return (
 <article className="producto-card">
@@ -19,6 +24,7 @@ return (
 <p>Categoría: {categoria}</p>
 <p>Precio: ${precio}</p>
 <p>Stock: {stock}</p>
+<p>Precio: ${formatearPrecio(precio)}</p>
 <strong>{estado}</strong>
 <br />
 <button
